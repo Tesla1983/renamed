@@ -1,6 +1,6 @@
 run-name: name: Release
 
-于:
+on:
   push:
    tag:
       - 'v*'  # 推送 v1.0.0 等标签时触发
