@@ -1,22 +1,23 @@
-concurrency: name: Rust
+name: Rust
 
-于:
+on:
   push:
-    分支: [ "master" ]
+    branches: [ "master" ]
   pull_request:
-    分支: [ "master" ]
+    branches: [ "master" ]
 
 env:
   CARGO_TERM_COLOR: always
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
-      run: cargo test --verbose
+      - uses: actions/checkout@v4
+      
+      - name: Build
+        run: cargo build --verbose
+      
+      - name: Run tests
+        run: cargo test --verbose
