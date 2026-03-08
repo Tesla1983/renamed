@@ -11,7 +11,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest  # 改为 Windows 环境
 
     steps:
       - uses: actions/checkout@v4
