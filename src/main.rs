@@ -458,7 +458,7 @@ fn show_progress_bar(current: usize, total: usize, status: &str) {
 
     print!("\r[");
 
-    // 绿色填充部分
+    // 绿色的填充部分
     for _ in 0..filled {
         print!("\x1b[92m█\x1b[0m");
     }
