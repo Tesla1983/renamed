@@ -1,0 +1,18 @@
+[package]
+name = "rename_1"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+chrono = "0.4"
+rand = "0.8.5"
+windows-sys = { version = "0.52", features = ["Win32_System_Console", "Win32_Foundation"] }
+
+[profile.release]
+#opt-level = 3       # 3编译最快
+opt-level = "z"      # z编译平衡
+lto = true
+codegen-units = 1    # ← 单代码生成单元，更好优化
+panic = "abort"      # ← 移除 panic 处理代码
+strip = true         # ← 移除符号信息
