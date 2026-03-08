@@ -1,8 +1,8 @@
-name: Release
+run-name: name: Release
 
-on:
+于:
   push:
-    tags:
+    标签:
       - 'v*'  # 推送 v1.0.0 等标签时触发
 
 env:
@@ -16,12 +16,7 @@ jobs:
           - os: windows-latest
             target: x86_64-pc-windows-msvc
             suffix: .exe
-          - os: ubuntu-latest
-            target: x86_64-unknown-linux-gnu
-            suffix: ''
-          - os: macos-latest
-            target: x86_64-apple-darwin
-            suffix: ''
+
 
     runs-on: ${{ matrix.os }}
 
