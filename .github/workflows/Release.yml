@@ -26,7 +26,5 @@ jobs:
         with:
           files: target/release/rename_1.exe
           name: Release ${{ github.ref_name }}
-          draft: false
-          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
