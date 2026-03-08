@@ -2,7 +2,7 @@ run-name: name: Release
 
 于:
   push:
-    标签:
+   tag:
       - 'v*'  # 推送 v1.0.0 等标签时触发
 
 env:
